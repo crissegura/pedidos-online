@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    font-family: 'Marko One', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btnsCantidad{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: baseline;
+  justify-content: left;
+}
+
+.btnsumar, .btnrestar{
+  background-color: transparent;
+  padding: .8rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btnsumar{
+  background-color: rgba(0, 128, 0, 0.712);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnrestar{
+  background-color: rgba(255, 0, 0, 0.815);
+}
+
+
+.btnAgregar{
+  font-size: 15px;
+  border: none;
+  color: white;
+  padding: .3rem;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.829);
+}
+
+.Navbar{
+  background-color: rgba(255, 0, 0, 0.829);
+  display: flex;
+  align-items: center;
+  min-height: 6rem;
+}
+
+.imgCarrito{
+  width: 4rem;
+  border-radius: 10px;
+}
+
+.headerContenido{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nombreLugarHeader{
+  font-size: 30px;
+  color: white;
+}
+
+.cardInicio{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid .5px rgba(128, 128, 128, 0.13);
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.tituloInicioCards{
+  font-size: 25px;
+}
+
+.imgInicioCard{
+  width: 4rem;
+  border-radius: 10px;
+}
+
+.contenedorProductos{
+  padding: 1rem;
+  color: rgb(80, 80, 80);
+}
+
+.tituloCard{
+  color: rgb(56, 56, 56);
+}
+
+.cardMostrarProductos{
+  padding-top: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.171);
+  padding-bottom: 1rem;
+}
+
+.textoCardMostrarProductos{
+  width: 100%;
+}
+
+.imgCard{
+  border-radius: 10px;
+  width: 5rem;
+}
+
+.carrito{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.cardCarrito{
+  border-bottom: solid 1px rgba(128, 128, 128, 0.274);
+  padding-top: .5rem;
+
+}
+
+.iconDelete{
+  width: 2rem;
+  border-radius: 50%;
+  margin-bottom: 5px;;
+}
+
+.btnDelete{
+  border: none;
+  background-color: transparent;
+}
+
+.btnPedir, .btnConfirmar{
+  border: none;
+  background-color: rgba(255, 0, 0, 0.829);
+  color: white;
+  padding: .5rem;
+  border-radius: 10px;
+  margin-top: .5rem;
+}
+
+.totalPedir{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  padding-top: .5rem;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.274);
+  padding-bottom: 1rem;
+}
+
+.divTerminarPedido{
+  padding: 1rem;
+}
+
+.inputAgregarCantidad{
+  width: 3rem;
+  text-align: left;
+  border: solid 1px rgba(128, 128, 128, 0.479);
+  padding-left: 2px;
 }

@@ -58,12 +58,12 @@ const ConfirmarPedido = ( ) => {
             <Form>
                 <Form.Group className="mb-3" >
                     <Form.Label>Nombre y apellido</Form.Label>
-                    <Form.Control   type="text" placeholder="Lionel Messi" onChange={getNombre}   />
+                    <Form.Control   type="text" placeholder="nombre apellido" onChange={getNombre}   />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Dirección</Form.Label>
-                    <Form.Control type="text" placeholder="Calle" onChange={getDireccion}  />
+                    <Form.Label>Calle</Form.Label>
+                    <Form.Control type="text" placeholder="calle" onChange={getDireccion}  />
                 </Form.Group>
 
                 <Form.Group className="mb-3">

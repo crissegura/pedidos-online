@@ -10,12 +10,14 @@ const Carrito = ( ) => {
 
     const {cart,clearCart,borrarProducto, getTotal} = useContext(CartContext);
 
-
     return(
         
             cart.length>0?
                 <div className="carrito">
                     <div className="totalPedir">
+                    <button className="btnPedir cats" onClick={()=>navigation('/')}>
+                        ❰
+                    </button>
                     <h3>Total: ${getTotal()}</h3>
                     <button className="btnConfirmar" onClick={()=>navigation('/confirmarpedido')}>
                         Confirmar
@@ -28,13 +30,23 @@ const Carrito = ( ) => {
                         <div style={{display:'flex',alignItems:'baseline',justifyContent:'space-evenly'}}>
                             <p >Cantidad: {producto.cantidad}</p>
                             <p className="mx-3" >Precio: {producto.precio*producto.cantidad}</p>
-                            <button className="btnDelete" onClick={()=>borrarProducto(producto.id)}>
+                            <button className="btnDelete" onClick={()=>borrarProducto(producto.nombre)}>
                                 <img 
                                     className="iconDelete"
                                     src={Delete} 
                                     alt="" 
                                 />
                             </button>
+                        </div>
+                        <div className="mostrarGustosEmp">
+                            {
+                                producto.gustos.map((gusto)=>{
+                                    if(gusto.cantidad!==0){
+                                        return <p className="mx-3">{gusto.gusto} x{gusto.cantidad}</p>
+                                        
+                                    }
+                                })
+                            }
                         </div>
                         </div>
                     })

@@ -13,8 +13,12 @@ export const CartProvider = ({defaultValue = [], children }) => {
         setCart([])
     }
 
-    const borrarProducto = ( id ) => {
-        const newCart = [...cart].filter(elemento=> elemento.id !== id)
+    const borrarCliente = () =>{
+        setCliente([])
+    }
+
+    const borrarProducto = ( nombre ) => {
+        const newCart = [...cart].filter(elemento=> elemento.nombre !== nombre)
         setCart(newCart)
     }
 
@@ -27,11 +31,11 @@ export const CartProvider = ({defaultValue = [], children }) => {
     }
 
     const getTotalProductos=()=>{
-        let total = 0
+        let cantidad = 0
         cart.forEach((element)=>{
-            total = total + 1
+            cantidad += element.cantidad
         })
-        return total;
+        return cantidad;
     }
 
     const isInCart = (id) =>{
@@ -46,7 +50,8 @@ export const CartProvider = ({defaultValue = [], children }) => {
         getTotal,
         getTotalProductos,
         cliente,
-        isInCart
+        isInCart,
+        borrarCliente
     }
 
     return  (

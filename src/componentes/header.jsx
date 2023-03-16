@@ -19,7 +19,7 @@ function Header() {
         <Container>
           <div className='headerContenido'>
             <h4 onClick={()=>navigation('/')} className='nombreLugarHeader'>
-                Pizza-onLine
+              Don Remolo
             </h4>
             <div style={{color:'white'}}>
               {getTotalProductos()} <img onClick={()=>navigation('/carrito')} className='imgCarrito' src={Carrito} alt="" />

@@ -7,6 +7,10 @@
     font-family: 'Marko One', serif;
 }
 
+.cats{
+  margin-right: 3rem;
+}
+
 .btnsCantidad{
   display: flex;
   align-items: baseline;
@@ -15,7 +19,7 @@
 
 .btnsumar, .btnrestar{
   background-color: transparent;
-  padding: .8rem;
+  padding: .5rem;
   border: none;
   border-radius: 10px;
   font-size: 15px;
@@ -66,7 +70,7 @@
 }
 
 .cardInicio{
-  padding: 1rem;
+  padding: .5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,4 +164,22 @@
   text-align: left;
   border: solid 1px rgba(128, 128, 128, 0.479);
   padding-left: 2px;
+}
+
+.mostrarGustosEmp{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.btnCantEmpanadas{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.get{
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }

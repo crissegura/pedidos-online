@@ -40,14 +40,6 @@ export const productos = [
         categoria: 'empanadas'
     },
     {
-        id:6,
-        foto: 'https://i.ytimg.com/vi/Btxc1EcWgDw/maxresdefault.jpg',
-        nombre: 'Empanada individual',
-        descripcion:'Empanadas fritas, gustos: carne, jyq, pollo, caprese y humita.',
-        precio: 250,
-        categoria: 'empanadas'
-    },
-    {
         id:7,
         foto: 'https://images.ctfassets.net/86mn0qn5b7d0/featured-img-of-post-123598/f2d0668d1ebc49caf1c56b2572474b46/featured-img-of-post-123598.jpg?fm=jpg&fl=progressive&q=50&w=1200&h=900&fit=fill',
         nombre: 'Porción de flan casero',

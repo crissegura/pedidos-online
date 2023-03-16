@@ -2,8 +2,20 @@ import { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from './cartcontext';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ConfirmarPedido = ( ) => {
+
+    const notify = () => toast.error('Completá todos los campos', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
 
     const navigation = useNavigate()
 
@@ -32,13 +44,17 @@ const ConfirmarPedido = ( ) => {
             navigation(`/terminarpedido/${generarId}`)
         }
         nombre===undefined|direccion===undefined|numero===undefined?
-            alert('Por favor completa todos los campos.')
+            notify()
         :
             avanzar()
     }
 
     return(
-        <div className="p-3">
+        <div className="p-3">     
+            <button className="btnPedir cats" onClick={()=>navigation('/carrito')}>
+                ❰
+            </button>    
+            <ToastContainer />       
             <Form>
                 <Form.Group className="mb-3" >
                     <Form.Label>Nombre y apellido</Form.Label>
